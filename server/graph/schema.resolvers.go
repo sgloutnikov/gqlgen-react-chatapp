@@ -9,6 +9,7 @@ import (
 	"gqlgen-react-chatapp/graph/model"
 )
 
+// PostMessage is the resolver for the postMessage field.
 func (r *mutationResolver) PostMessage(ctx context.Context, user string, content string) (int, error) {
 	// Construct the newly sent message and append it to the existing messages
 	msg := model.Message{
@@ -28,10 +29,12 @@ func (r *mutationResolver) PostMessage(ctx context.Context, user string, content
 	return msg.ID, nil
 }
 
+// Messages is the resolver for the messages field.
 func (r *queryResolver) Messages(ctx context.Context) ([]*model.Message, error) {
 	return r.ChatMessages, nil
 }
 
+// Messages is the resolver for the messages field.
 func (r *subscriptionResolver) Messages(ctx context.Context) (<-chan []*model.Message, error) {
 	// Create an ID and channel for each active subscription. We will push changes into this channel.
 	// When a new subscription is created by the client, this resolver will fire first.
