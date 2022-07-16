@@ -22,5 +22,5 @@ A client will be available on http://localhost:8080. Launch multiple clients in 
 
 #### More Examples
 
-- https://github.com/99designs/gqlgen/tree/master/example/chat
+- https://github.com/99designs/gqlgen/tree/master/_examples/chat
 - https://outcrawl.com/go-graphql-realtime-chat
